@@ -15,11 +15,9 @@ app.get('/', function (req, res) {
 });
 
 io.on('connection', socket => {
-	console.log('A user has connected');
-	console.log(socket.id);
+  console.log('A user has connected');
 	connectedUsers.push(socket.id);
 	socket.emit('setCanvas', canvasWidth, canvasHeight);
-	console.log(`connected users ::  ${connectedUsers.length}`);
 
 	if (connectedUsers.length < 2) {
 		socket.emit('notifyWaiting');
@@ -32,8 +30,7 @@ io.on('connection', socket => {
   }
   
   if (connectedUsers.length > 2) {
-    socket.emit('tooManyUsers');
-    socket.disconnect();
+    socket.emit('tooManyUsers');      // snake game cannot have more than 2 players
   }
 
 	socket.on('keyPress', key => {
