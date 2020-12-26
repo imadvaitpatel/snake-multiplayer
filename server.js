@@ -61,8 +61,8 @@ io.on('connection', socket => {
 	});
 });
 
-server.listen(3000);
-console.log('listening on http://localhost:3000');
+server.listen(process.env.port || 3000);
+console.log('listening on port');
 
 app.use(express.static('public'));
 
