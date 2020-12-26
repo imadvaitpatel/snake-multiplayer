@@ -60,8 +60,8 @@ io.on('connection', socket => {
 		console.log('A user has disconnected');
 	});
 });
-
-server.listen(process.env.port || 3000);
+const PORT = process.env.PORT || 3000;
+server.listen(PORT);
 console.log('listening on port');
 
 app.use(express.static('public'));
