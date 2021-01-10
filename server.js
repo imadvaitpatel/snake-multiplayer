@@ -68,7 +68,7 @@ const boxSize = 8; // snake and food box size
 const canvasWidth = 1000;
 const canvasHeight = 600;
 
-const frameRate = 30;
+const frameRate = 60;
 
 const direction = {
 	UP: 'up',
