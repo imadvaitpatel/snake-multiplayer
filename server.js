@@ -63,12 +63,12 @@ console.log('listening on port');
 
 app.use(express.static('public'));
 
-const boxSize = 8; // snake and food box size
+const boxSize = 4; // snake and food box size
 
 const canvasWidth = 400;
-const canvasHeight = 400;
+const canvasHeight = 200;
 
-const frameRate = 60;
+const frameRate = 30;
 
 const direction = {
 	UP: 'up',
