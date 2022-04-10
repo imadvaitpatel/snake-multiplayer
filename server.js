@@ -65,8 +65,8 @@ app.use(express.static('public'));
 
 const boxSize = 8; // snake and food box size
 
-const canvasWidth = 800;
-const canvasHeight = 600;
+const canvasWidth = 400;
+const canvasHeight = 400;
 
 const frameRate = 60;
 
